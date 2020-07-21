@@ -236,6 +236,9 @@ b {
 
 /* Секция-герой */
 .hero {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
 
     color: var(--dark-section-text-color);
@@ -613,14 +616,6 @@ b {
     margin-left: 12px;
 }
 
-.test::after{
-    display: block;
-    background-image: url(../images/icon-send.svg);
-    background-color: #F5F4FA;
-    width: 24px;
-    height: 24px;
-    content: "";
-}
 /* КОНЕЦ СТИЛЕЙ СТРАНИЦЫ СТУДИЯ */
 
 /* СТИЛИ СТРАНИЦЫ ПОРТФОЛИО */
