@@ -50,6 +50,7 @@ body {
     --secondary-bg-color: #F5F4FA;
     --opacity-section-color: rgba(47, 48, 58, 0.8);
     --btn-primary-hover-color: #188CE8;
+    --social-item-bacic-color: #AFB1B8;
 }
 
 .list,
@@ -204,6 +205,19 @@ b {
 }
 
 
+
+.contact-us .icon {
+    margin-right: 8px;
+
+    fill: var(--secondary-text-color);
+
+}
+
+.contact-us .icon:hover,
+.contact-us .icon:focus {
+    fill: var(--accent-color);
+}
+
 .contact-us a  {
     color: var(--secondary-text-color);
 
@@ -218,9 +232,7 @@ b {
     color: var(--accent-color);
 }
 
-.contact-us-icon {
-    margin-right: 10px;
-}
+
 
 /* Секция-герой */
 .hero {
@@ -228,8 +240,13 @@ b {
 
     color: var(--dark-section-text-color);
     background-color: var(--opacity-section-color);
-}
 
+    background-image: linear-gradient(var(--opacity-section-color), var(--opacity-section-color)), url(../images/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+    
 .hero-title {
     width: 696px;
     margin-right: auto;
@@ -281,12 +298,47 @@ b {
     width: calc((100% - 90px) / 4);
 }
 
+.features-list-item::before {
+    display: block;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    background-color: var(--secondary-bg-color);
+    /* background-image: url(../images/advantages/antenna.svg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px 70px;
+
+    border-radius: 4px;
+
+    content: "";
+}
+
+.features-list-item.antenna::before {
+    background-image: url(../images/advantages/antenna.svg);
+}
+
+.features-list-item.clock::before {
+    background-image: url(../images/advantages/clock.svg);
+}
+
+.features-list-item.diagram::before {
+    background-image: url(../images/advantages/diagram.svg);
+}
+
+.features-list-item.astronaut::before {
+    background-image: url(../images/advantages/astronaut.svg);
+}
+
+
+
 .features-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
 
-.features-list-item-img {
+/* .features-list-item-img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,7 +349,7 @@ b {
     background-color: var(--secondary-bg-color);
 
     border-radius: 4px;
-}
+} */
 
 .features-list-item-title {
     margin-bottom: 10px;
@@ -403,8 +455,11 @@ b {
 .social-item:focus,
 .social-item-link:hover,
 .social-item-link:focus {
+    width: 44px;
+    height: 44px;
     background-color: var(--accent-color);
     border-radius: 50%;
+
 }
 
 .social-item-link {
@@ -412,6 +467,16 @@ b {
     padding: 12px;
 
     color: var(--primary-text-color);
+}
+
+.social-item .icon {
+    fill: var(--social-item-bacic-color);
+
+}
+
+.social-item .icon:hover,
+.social-item .icon:focus {
+    fill: var(--dark-section-text-color);
 }
 
 /* Секция Клиенты */
@@ -425,6 +490,19 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-list-item > .link {
+    display: flex;
+    width: 170px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    
 
     background-color: var(--primary-bg-color);
     border-style: solid;
@@ -433,12 +511,19 @@ b {
     border-color: #AFB1B8;
 }
 
-.clients-list-item:not(:last-child) {
-    margin-right: 30px;
-}
-.clients-list-item:hover,
-.clients-list-item:focus {
+.clients-list-item > .link:hover,
+.clients-list-item > .link:focus {
     border-color: var(--accent-color); 
+}
+
+
+.clients-list .icon {
+    fill: var(--social-item-bacic-color);
+}
+
+.clients-list .icon:hover,
+.clients-list .icon:focus {
+    fill: var(--accent-color);
 }
 
 /* Подвальчик */
@@ -511,15 +596,30 @@ b {
 }
 
 .join-list > .social-item {
+    width: 44px;
+    height: 44px;
+
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
 }
-.join-list > .social-item:hover {
-    background-color: var(--accent-color);
+/* ховер и фокус дублируют соцсети в секции Наша команда */
+}
+
+.join-list .icon {
+    fill: var(--dark-section-text-color);
 }
 
 .subscribe-form .btn-primary {
     margin-left: 12px;
+}
+
+.test::after{
+    display: block;
+    background-image: url(../images/icon-send.svg);
+    background-color: #F5F4FA;
+    width: 24px;
+    height: 24px;
+    content: "";
 }
 /* КОНЕЦ СТИЛЕЙ СТРАНИЦЫ СТУДИЯ */
 
