@@ -200,12 +200,14 @@ b {
     align-items: center;
 }
 
+
 .contact-us-item:not(:last-child) {
     margin-right: 30px;
 }
 
 .contact-us .icon {
     margin-right: 8px;
+    margin-top: 2px;
 
     fill: var(--secondary-text-color);
 
@@ -218,6 +220,9 @@ b {
 
 
 .contact-us a  {
+    display: flex;
+    /* align-items: flex-end; */
+
     color: var(--secondary-text-color);
 
     font-weight: 500;
@@ -250,10 +255,10 @@ b {
     color: var(--dark-section-text-color);
     background-color: var(--opacity-section-color);
 
-    background-image: linear-gradient
-    (var(--opacity-section-color), 
-    var(--opacity-section-color)), 
-    url(../images/hero-background.jpg);
+    background-image: linear-gradient(
+        var(--opacity-section-color), 
+        var(--opacity-section-color)), 
+        url(../images/hero-background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
