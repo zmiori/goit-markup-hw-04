@@ -207,11 +207,15 @@ b {
 
 .contact-us .icon {
     margin-right: 8px;
-    margin-top: 2px;
 
     fill: var(--secondary-text-color);
 
 }
+
+.icon.envelope {
+    margin-top: 2px;
+}
+
 
 .contact-us .icon:hover,
 .contact-us .icon:focus {
@@ -241,8 +245,6 @@ b {
  {
     fill: var(--accent-color);
 }
-
-
 
 
 /* Секция-герой */
