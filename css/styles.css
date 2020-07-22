@@ -218,6 +218,7 @@ b {
     fill: var(--accent-color);
 }
 
+
 .contact-us a  {
     color: var(--secondary-text-color);
 
@@ -226,11 +227,18 @@ b {
     line-height: 1.14;
     letter-spacing: 0.02em;
 }
+
 .contact-us a:hover,
-.contact-us a:focus
- {
+.contact-us a:focus {
     color: var(--accent-color);
 }
+
+.contact-us a:hover .icon,
+.contact-us a:focus .icon
+ {
+    fill: var(--accent-color);
+}
+
 
 
 
@@ -248,6 +256,11 @@ b {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.hero .container {
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
     
 .hero-title {
@@ -477,8 +490,8 @@ b {
 
 }
 
-.social-item .icon:hover,
-.social-item .icon:focus {
+.social-item-link:hover .icon,
+.social-item-link:focus .icon {
     fill: var(--dark-section-text-color);
 }
 
@@ -499,7 +512,7 @@ b {
     margin-right: 30px;
 }
 
-.clients-list-item > .link {
+.clients-list-link {
     display: flex;
     width: 170px;
     height: 90px;
@@ -514,8 +527,8 @@ b {
     border-color: #AFB1B8;
 }
 
-.clients-list-item > .link:hover,
-.clients-list-item > .link:focus {
+.clients-list-link:hover,
+.clients-list-link:focus {
     border-color: var(--accent-color); 
 }
 
@@ -524,10 +537,11 @@ b {
     fill: var(--social-item-bacic-color);
 }
 
-.clients-list .icon:hover,
-.clients-list .icon:focus {
-    fill: var(--accent-color);
+.clients-list-link:hover .icon,
+.clients-list-link:focus .icon {
+    fill: var(--accent-color); 
 }
+
 
 /* Подвальчик */
 
